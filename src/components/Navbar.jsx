@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { Fade as Hamburger } from 'hamburger-react'
+
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -26,7 +28,12 @@ function Navbar() {
 
       {/* hamburger */}
       <div onClick={handleClick} className="md:hidden z-10">
-        {!nav ? <FaBars /> : <FaTimes />}
+        <Hamburger
+        color="#fb9039"
+        size={23}
+        toggled={nav}
+        toggle={setNav}
+        />
       </div>
 
       {/* mobile menu */}
@@ -34,14 +41,15 @@ function Navbar() {
         className={
           !nav
             ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
+            : "absolute top-0 right-0 w-[70%] h-screen bg-[#1f3044] flex flex-col justify-center items-center"
         }
       >
-        <li className="py-6 text-4x1xl">Home</li>
-        <li className="py-6 text-4x1xl">About</li>
-        <li className="py-6 text-4x1xl">Skills</li>
-        <li className="py-6 text-4x1xl">Contact</li>
+        <li className="hover:text-[#fb9039] group py-6 text-4xlxl">Home</li>
+        <li className="hover:text-[#fb9039] group py-6 text-4xlxl">About</li>
+        <li className="hover:text-[#fb9039] group py-6 text-4xlxl">Skills</li>
+        <li className="hover:text-[#fb9039] group py-6 text-4xlxl">Contact</li>
       </ul>
+
 
       {/* social icons */}
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
