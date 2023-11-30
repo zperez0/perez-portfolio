@@ -3,7 +3,7 @@ import React from "react";
 function Home() {
   return (
     // name="home" used for react scroll feature
-    <div name="home" className="w-full h-screen bg-[#0a192f]">
+    <div name="home" className="w-full h-screen bg-[#1f3044] flex-col">
 
     {/* container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
@@ -21,7 +21,7 @@ function Home() {
 
           {/* <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600"> */}
 
-          <button className="text-white group rounded-md border-2 px-6 py-3 my-2 flex items-center hover:bg-[#fb9039] hover:border-[#fb9039] outline-none focus:ring-4 focus:ring-[#8892b0] shadow-lg active:scale-y-75 transition-transform">
+          <button className="text-white group rounded-md border-2 px-6 py-3 my-2 flex items-center hover:bg-[#fb9039] hover:border-[#fb9039] outline-none focus:ring-2 focus:ring-[#8892b0] shadow-lg active:scale-y-75 transition-transform">
             View Work
           </button>
         </div>
